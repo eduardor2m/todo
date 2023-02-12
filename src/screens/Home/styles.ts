@@ -18,6 +18,16 @@ export const ListTodos = styled.FlatList.attrs({
   margin-top: -32px;
 `;
 
+export const ButtonDelete = styled.TouchableOpacity`
+  width: 96px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  border-radius: 10px;
+  margin-left: -15px;
+`;
+
 export const ItemSeparator = styled.View`
   width: 100%;
   margin-top: -15px;

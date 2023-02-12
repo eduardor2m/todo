@@ -13,7 +13,7 @@ import {
 import { ITodo, useTodo } from '../../hooks/useTodo';
 
 export const Todo = ({ id, text, category, name, completed }: ITodo) => {
-  const { deleteTodo, updateTodo } = useTodo();
+  const { updateTodo } = useTodo();
 
   return (
     <Container
@@ -54,9 +54,6 @@ export const Todo = ({ id, text, category, name, completed }: ITodo) => {
         </WrapperText>
         <WrapperButton>
           <Button
-            onLongPress={() => {
-              deleteTodo(id);
-            }}
             onPress={() => {
               updateTodo(id);
             }}>

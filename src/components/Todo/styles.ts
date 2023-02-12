@@ -19,7 +19,6 @@ export const Content = styled.View`
 
 export const WrapperIcon = styled.View`
   width: 20%;
-  /* background-color: red; */
   height: 100%;
   align-items: center;
   justify-content: center;
@@ -35,7 +34,6 @@ export const Icon = styled.View`
 `;
 
 export const WrapperText = styled.View`
-  /* background-color: black; */
   width: 60%;
   height: 100%;
   align-items: flex-start;
@@ -49,7 +47,6 @@ export const Text = styled.Text`
 `;
 
 export const WrapperButton = styled.View`
-  /* background-color: blue; */
   width: 20%;
   height: 100%;
   align-items: center;

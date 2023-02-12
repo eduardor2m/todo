@@ -55,3 +55,26 @@ export const InputDescription = styled.TextInput`
   margin-top: 16px;
   padding: 16px;
 `;
+
+export const WrapperButtonCreate = styled.View`
+  width: 100%;
+  padding: 0 24px;
+  align-items: center;
+  margin-top: 16px;
+`;
+
+export const ButtonCreate = styled.TouchableOpacity`
+  width: 100%;
+  height: 56px;
+  border-radius: 8px;
+  background-color: #4a3780;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const TextButtonCreate = styled.Text`
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+`;

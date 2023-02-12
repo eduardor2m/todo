@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 import {
   Container,
   EmptyList,
@@ -10,15 +11,29 @@ import {
 } from './styles';
 import { Header } from '../../components/Header';
 import { Todo } from '../../components/Todo';
+import { useTodo } from '../../hooks/useTodo';
 
 export const Home = ({ navigation }: any) => {
+  const { todos } = useTodo();
+
+  const todosComplets = todos.filter((todo) => todo.completed);
+  const todosIncomplets = todos.filter((todo) => !todo.completed);
+
   return (
     <Container>
       <Header navigation={navigation} />
       <ListTodos
-        data={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
-        keyExtractor={(item) => String(item)}
-        renderItem={({ item }) => <Todo />}
+        data={todosIncomplets}
+        keyExtractor={(item: any) => String(item.id)}
+        renderItem={({ item }: any) => (
+          <Todo
+            text={item.text}
+            name={item.name}
+            category={item.category}
+            id={item.id}
+            completed={false}
+          />
+        )}
         ItemSeparatorComponent={() => <ItemSeparator />}
         ListEmptyComponent={() => (
           <WrapperEmptyList>
@@ -30,9 +45,11 @@ export const Home = ({ navigation }: any) => {
         <Title>Completas</Title>
       </WrapperTitle>
       <ListTodosComplets
-        data={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
-        keyExtractor={(item) => String(item)}
-        renderItem={({ item }) => <Todo />}
+        data={todosComplets}
+        keyExtractor={(item: any) => String(item.id)}
+        renderItem={({ item }: any) => (
+          <Todo text={item.text} name={item.name} category={item.category} id={item.id} completed />
+        )}
         ItemSeparatorComponent={() => <ItemSeparator />}
         ListEmptyComponent={() => (
           <WrapperEmptyList>

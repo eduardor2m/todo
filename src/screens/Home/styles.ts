@@ -60,6 +60,7 @@ export const ListTodosComplets = styled.FlatList.attrs({
   },
 })`
   width: 100%;
+  height: 530px;
   padding: 0 24px;
   margin-top: 32px;
 `;

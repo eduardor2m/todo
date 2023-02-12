@@ -39,7 +39,6 @@ export const Create = ({ navigation }: any) => {
         return;
       }
 
-      console.log(newTodo);
       await createTodo({
         id: String(new Date().getTime()),
         name: todo.name,

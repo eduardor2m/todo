@@ -28,6 +28,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "3c966f28-bc8f-4437-99aa-c2d9a936fee4"
+      }
+    },
+    "owner": "eduardor2m"
   }
 }
